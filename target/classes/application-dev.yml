@@ -1,0 +1,37 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /sisar/api
+spring:
+  datasource:
+    #url: jdbc:oracle:thin:@192.168.105.121:1539/mtpe_desa
+    #:1433
+    url: jdbc:sqlserver://34.172.185.94;databaseName=bdcontrolproject
+    #url: jdbc:sqlserver://LUWY\SQLEXPRESS;databaseName=SISPRO
+    #url: jdbc:sqlserver://database-2.cbumdedei63y.sa-east-1.rds.amazonaws.com;databaseName=SISGESPRO
+    #LAPTOP-91RVABF6 ;integratedSecurity=true
+    username: sqlserver
+    password: Sql2018@-
+    
+    #url: jdbc:sqlserver://LUWY\SQLEXPRESS;databaseName=SISPRO
+    #url: jdbc:sqlserver://database-2.cbumdedei63y.sa-east-1.rds.amazonaws.com;databaseName=SISGESPRO
+    #LAPTOP-91RVABF6 ;integratedSecurity=true
+    username: sa
+    password: 123456
+    #username: adminG2
+    #password: alessia07
+    #url: jdbc:oracle:thin:@localhost:1521/xe
+    #username: MACSYS
+    #password: MACSYS
+    #driver-class-name: oracle.jdbc.OracleDriver
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+                       
+  jpa:
+    show-sql: false
+    #database-platform: org.hibernate.dialect.Oracle10gDialect
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    properties:
+      format_sql: true
+    hibernate:
+      ddl-auto: none
+         
